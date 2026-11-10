@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A fast, beautiful, zero-dependency developer portfolio. Edit one file, deploy anywhere.",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000",
+    "meta": "node scripts/sync-meta.js",
+    "build": "node scripts/sync-meta.js"
+  },
+  "license": "MIT"
+}
