@@ -14,19 +14,38 @@ window.SITE = {
     description: "Full-stack developer building fast, minimal and delightful web apps.",
     favicon: "assets/img/favicon.svg",            // any image path or URL
     shareImage: "assets/img/og-image.png",        // 1200x630, shown when you share the link
-    themeColor: "#0b0d12",
+    themeColor: "#f3f0e8",
     language: "en",                               // default language: "en" or "vi"
     languages: ["en", "vi"],                      // remove one to hide the language switch
   },
 
-  /* ---------- Look & feel (change the banner / background here) ---------- */
+  /* ---------- Look & feel -------------------------------------------------- */
   appearance: {
-    background: "assets/img/banner.svg",  // image, GIF or video URL (.mp4/.webm). "" = animated gradient
-    backgroundDim: 0.55,                  // 0 (bright) … 1 (black): keeps text readable
-    accent: "#7c8cff",                    // buttons, glow, highlights — any CSS colour
+    /* THEME: "auto" follows the visitor's light/dark setting (paper + ink).
+       Or pick one: "paper" "ink" "blueprint" "terminal" "mono" "rose"
+       Add your own in assets/js/themes.js */
+    theme: "auto",
+    themeLight: "paper",                  // used by "auto"
+    themeDark: "ink",                     // used by "auto"
+
+    /* COLOURS: override any part of the theme. Remove the lines you do not need.
+       keys: bg surface text muted line accent accentInk                           */
+    colors: {
+      // accent: "#ff5a1f",
+      // bg: "#fffdf7",
+    },
+
+    displayFont: "serif",                 // headings: "serif" | "sans" | "mono"
+    corners: "sharp",                     // "sharp" | "round"
+    themePicker: true,                    // little palette button so you (and visitors) can try colours live
+
+    /* BANNER / BACKGROUND: image, GIF or video (.mp4/.webm) path or URL.
+       "" = clean solid colour with a faint dot grid.  Example: "assets/img/banner-sample.jpg" */
+    background: "",
+    backgroundDim: 0.6,                   // how strongly the theme colour covers your image: 0 … 1
+
     intro: true,                          // full-screen "enter" splash
     introKicker: { en: "Personal portfolio", vi: "Portfolio cá nhân" },
-    cards: "glass",                       // "glass" (blurred) or "solid"
   },
 
   /* ---------- You --------------------------------------------------------- */
